@@ -14,7 +14,7 @@
 <body>
     <header>
         <section class="mx-12 my-6">
-            <div class="navbar bg-slate-300 m lg:px-12">
+            <div class="navbar bg-slate-300 lg:px-12">
                 <div class="navbar-start">
 
                     <a class="normal-case text-xl"><span class="text-blue-900 font-bold ">Interactive </span><br>
@@ -61,14 +61,14 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title-01">Rectangle</h2>
-                        <p>Area(A) = 0.5 X b X h</p>
+                        <p>Area(A) = w X l</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="b">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="w">
                                 <p>cm</p>
                             </div>
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="h">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="l">
                                 <p>cm</p>
                             </div>
                         </div>
@@ -84,15 +84,11 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title-01">Parallelogram</h2>
-                        <p>Area(A) = 0.5 X b X h</p>
+                        <p>Area(A) = b X h</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="b">
-                                <p>cm</p>
-                            </div>
-                            <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="h">
-                                <p>cm</p>
+                                <p>b = <span id="parallelogram-b">10</span>cm ;</p>
+                                <p>h = <span id="parallelogram-h">12</span> cm;</p>
                             </div>
                         </div>
                         <div class="card-actions">
@@ -107,15 +103,11 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title-01">Rhombus</h2>
-                        <p>Area(A) = 0.5 X b X h</p>
+                        <p>Area(A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="b">
-                                <p>cm</p>
-                            </div>
-                            <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="h">
-                                <p>cm</p>
+                                <p><span id="">d<sub>1</sub></span> = <span id="rhombus-d1">10</span>cm ;</p>
+                                <p><span id="">d<sub>2</sub></span> = <span id="rhombus-d2">12</span> cm;</p>
                             </div>
                         </div>
                         <div class="card-actions">
@@ -124,21 +116,17 @@
                     </div>
                 </div>
                 <!-- card 05 -->
-                <div class="card w-full bg-rose-500 shadow-xl ">
+                <div class="card w-full bg-red-300 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title-01">Pentagon</h2>
-                        <p>Area(A) = 0.5 X b X h</p>
+                        <p>Area(A) = 0.5 X p X b</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="b">
-                                <p>cm</p>
-                            </div>
-                            <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="h">
-                                <p>cm</p>
+                                <p>p = <span id="pentagon-p">06</span>cm ;</p>
+                                <p>b = <span id="pentagon-b">10</span> cm;</p>
                             </div>
                         </div>
                         <div class="card-actions">
@@ -153,15 +141,11 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title-01">Ellipse</h2>
-                        <p>Area(A) = 0.5 X b X h</p>
+                        <p>Area(A) = &#8508 X a X b</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="b">
-                                <p>cm</p>
-                            </div>
-                            <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="h">
-                                <p>cm</p>
+                                <p>a = <span id="ellipse-a">06</span>cm ;</p>
+                                <p>b = <span id="ellipse-b">10</span> cm;</p>
                             </div>
                         </div>
                         <div class="card-actions">
@@ -171,13 +155,17 @@
                 </div>
             </div>
             <div class="grid justify-items-center">
-                <div>
-                    <h1>Area Calculation</h1>
-                    <hr>
+                <div class="font-bold mx-12">
+                    <h1 class="underline underline-offset-8">Area Calculation</h1>
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer footer-center p-4 bg-slate-300 text-base-content mx-12 my-6">
+        <div>
+            <p>Copyright © 2023 - All right reserved by <span>Geometry Genius</span></p>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 

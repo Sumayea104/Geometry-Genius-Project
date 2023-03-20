@@ -31,7 +31,7 @@
         <section class="mx-12 my-6 lg:flex gap-4">
             <div class="items w-3/4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                 <!-- cards -->
-                <!-- card 01 -->
+                <!-- card 01 triangle-->
                 <div class="card w-full bg-indigo-200 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
@@ -41,54 +41,54 @@
                         <p>Area(A) = 0.5 X b X h</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="b">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-base" placeholder="b">
                                 <p>cm</p>
                             </div>
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="h">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-base" placeholder="h">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button class="btn btn-primary" >Calculate</button>
                         </div>
                     </div>
                 </div>
-                <!-- card 02 -->
+                <!-- card 02 rectangle-->
                 <div class="card w-full bg-violet-400 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title-01">Rectangle</h2>
+                        <h2 class="card-title-02">Rectangle</h2>
                         <p>Area(A) = w X l</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="w">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="rectangle-width" placeholder="w">
                                 <p>cm</p>
                             </div>
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="" placeholder="l">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="rectangle-length" placeholder="l">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button class="btn btn-primary" >Calculate</button>
                         </div>
                     </div>
                 </div>
-                <!-- card 03 -->
+                <!-- card 03 parallelogram-->
                 <div class="card w-full bg-amber-200 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="images/parallelogram.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title-01">Parallelogram</h2>
+                        <h2 class="card-title-03">Parallelogram</h2>
                         <p>Area(A) = b X h</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <p>b =<span id="parallelogram-b">10</span>cm;</p>
-                                <p>h =<span id="parallelogram-h">12</span>cm;</p>
+                                <p>b = <span id="parallelogram-b">10</span> cm;</p>
+                                <p>h = <span id="parallelogram-h">12</span> cm;</p>
                             </div>
                         </div>
                         <div class="card-actions">
@@ -96,13 +96,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- card 04 -->
+                <!-- card 04 Rhombus-->
                 <div class="card w-full bg-lime-200 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title-01">Rhombus</h2>
+                        <h2 class="card-title-04">Rhombus</h2>
                         <p>Area(A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                         <div class="flex my-6">
                             <div class="flex">
@@ -115,13 +115,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- card 05 -->
+                <!-- card 05 pentagon-->
                 <div class="card w-full bg-red-300 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title-01">Pentagon</h2>
+                        <h2 class="card-title-05">Pentagon</h2>
                         <p>Area(A) = 0.5 X p X b</p>
                         <div class="flex my-6">
                             <div class="flex">
@@ -134,13 +134,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- card 06 -->
+                <!-- card 06 ellipse-->
                 <div class="card w-full bg-lime-700 shadow-xl ">
                     <figure class="px-10 pt-10">
                         <img src="images/ellipse.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title-01">Ellipse</h2>
+                        <h2 class="card-title-06">Ellipse</h2>
                         <p>Area(A) = &#8508 X a X b</p>
                         <div class="flex my-6">
                             <div class="flex">
@@ -154,6 +154,7 @@
                     </div>
                 </div>
             </div>
+            <!-- area calculation -->
             <div class="card lg:w-1/4 m bg-indigo-900 text-neutral-content mb-6">
                 <div class="card-body items-center text-center underline underline-offset-8">
                     <h2 class="card-title">Area Calculation</h2>

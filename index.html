@@ -38,7 +38,7 @@
                         <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title-01">Triangle</h2>
+                        <h2 class="card-title-01" id="First-name">Triangle</h2>
                         <p>Area(A) = 0.5 X b X h</p>
                         <div class="flex my-6">
                             <div class="flex">
@@ -47,13 +47,13 @@
                                 <p>cm</p>
                             </div>
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-base"
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-height"
                                     placeholder="h">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button class="btn btn-primary" id="first-card">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                     <h2 class="card-title">Area Calculation</h2>
 
                     <div class="">
-                        <table class="table w-full">
+                        <table class="table w-full text-black">
                             <!-- head -->
                             <thead>
                                 <tr>
@@ -175,6 +175,9 @@
                                 
                                 </tr>
                             </thead>
+                            <tbody id="table-container">
+
+                            </tbody>
                         </table>
                     </div>
                 </div>

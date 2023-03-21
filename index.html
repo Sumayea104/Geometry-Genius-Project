@@ -29,6 +29,7 @@
     </header>
     <main>
         <section class="mx-12 my-6 lg:flex gap-4">
+            <!-- card container -->
             <div class="items w-3/4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                 <!-- cards -->
                 <!-- card 01 triangle-->
@@ -41,16 +42,18 @@
                         <p>Area(A) = 0.5 X b X h</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-base" placeholder="b">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-base"
+                                    placeholder="b">
                                 <p>cm</p>
                             </div>
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-base" placeholder="h">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="triangle-base"
+                                    placeholder="h">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary" >Calculate</button>
+                            <button class="btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -64,16 +67,18 @@
                         <p>Area(A) = w X l</p>
                         <div class="flex my-6">
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="rectangle-width" placeholder="w">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="rectangle-width"
+                                    placeholder="w">
                                 <p>cm</p>
                             </div>
                             <div class="flex">
-                                <input class="w-1/2 rounded-sm" type="number" name="" id="rectangle-length" placeholder="l">
+                                <input class="w-1/2 rounded-sm" type="number" name="" id="rectangle-length"
+                                    placeholder="l">
                                 <p>cm</p>
                             </div>
                         </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary" >Calculate</button>
+                            <button class="btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -158,6 +163,20 @@
             <div class="card lg:w-1/4 bg-indigo-900 text-neutral-content mb-6">
                 <div class="card-body items-center text-center underline underline-offset-8">
                     <h2 class="card-title">Area Calculation</h2>
+
+                    <div class="">
+                        <table class="table w-full">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Area</th>
+                                    <th>Output</th>
+                                
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
@@ -168,6 +187,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/test.js"></script>
 </body>
 
 </html>

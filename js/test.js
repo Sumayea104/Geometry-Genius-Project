@@ -3,6 +3,10 @@ document.getElementById('first-card').addEventListener('click', function () {
     const cardElement = document.getElementById('First-name').innerText;
     const base = document.getElementById('triangle-base').value;
     const height = document.getElementById('triangle-height').value;
+
+    if( base == ''|| height == ''){
+        return alert('please enter valid number' );
+    }
     const area = 0.5 * base * height;
 
 
@@ -40,7 +44,7 @@ document.getElementById('fifth-card').addEventListener('click', function () {
     const cardElement = document.getElementById('fifth-title').innerText;
     const p = document.getElementById('pentagon-p').innerText;
     const b = document.getElementById('pentagon-b').innerText;
-    const area =0.5 * parseInt(p) * parseInt(b);
+    const area = 0.5 * parseInt(p) * parseInt(b);
 
     displayData(cardElement, area);
 });
@@ -49,9 +53,11 @@ document.getElementById('sixth-card').addEventListener('click', function () {
     const cardElement = document.getElementById('sixth-title').innerText;
     const a = document.getElementById('ellipse-a').innerText;
     const b = document.getElementById('ellipse-b').innerText;
-    const area = parseInt(a) * parseInt(b);
+
+    const area = 3.14 * parseInt(a) * parseInt(b);
 
     displayData(cardElement, area);
+    addInputFields(a, b);
 });
 
 
@@ -70,4 +76,34 @@ function displayData(cardElement, area) {
     <td>${area}</td>
     `;
     container.appendChild(tr);
+
+
+}
+
+
+// Define the addInputFields function
+function addInputFields() {
+    // Get the checkbox and the span elements
+    const checkbox = document.querySelector('.checkbox');
+    const spanA = document.querySelector('#ellipse-a');
+    const spanB = document.querySelector('#ellipse-b');
+
+    // Listen for the change event on the checkbox
+    checkbox.addEventListener('change', () => {
+        // If the checkbox is checked, add an input field for a
+        if (checkbox.checked) {
+            const inputA = document.createElement('input');
+            inputA.type = 'number';
+            inputA.value = spanA.textContent;
+            inputA.addEventListener('input', () => {
+                spanA.textContent = inputA.value;
+            });
+            spanA.replaceWith(inputA);
+        } else {
+            // Otherwise, remove the input field and restore the span
+            const span = document.createElement('span');
+            span.textContent = spanA.value;
+            inputA.replaceWith(span);
+        }
+    });
 }

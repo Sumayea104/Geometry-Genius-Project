@@ -23,9 +23,8 @@ document.getElementById('calculate-triangle').addEventListener('click', function
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
-
     changeCardColorOnHover(firstCard);
-    
+
 });
 
 // second card
@@ -168,7 +167,13 @@ function displayData(cardElement, areaInCmSquared, areaInSqM) {
         <td>${count}</td>
         <td>${cardElement}</td>
         <td class="area">${areaInCmSquared}</td>
-        <td><button class="btn btn-primary convert-btn" data-cm="${areaInCmSquared}" data-sqm="${areaInSqM}">Convert to m²</button></td>
+        <td>
+        <button class="btn btn-primary convert-btn" data-cm="${areaInCmSquared}" data-sqm="${areaInSqM}">Convert to m²</button></td>
+        <td>
+        <button class="btn btn-square btn-ghost py-2 px-4 rounded">
+        <img src="images/remove.png" alt="" srcset="">
+        </button>
+        </td>
     `;
     container.appendChild(tr);
 
@@ -187,7 +192,14 @@ function displayData(cardElement, areaInCmSquared, areaInSqM) {
             isDisplayingSqM = true;
         }
     });
+
+    const cancelBtn = tr.querySelector('.btn-ghost');
+
+    cancelBtn.addEventListener('click', function () {
+        tr.remove();
+    });
 }
+
 
 function convertToSqM(areaInCmSquared) {
     const areaWithoutSuffix = areaInCmSquared.replace(" cm²", "");
@@ -198,58 +210,13 @@ function convertToSqM(areaInCmSquared) {
 
 
 
-// Define the addInputFields function
-function addInputFields(a, b) {
-    // Get the checkbox, the span elements and their parent
-    const checkbox = document.getElementById('checkbox');
-    const spanA = document.getElementById('ellipse-a');
-    const spanB = document.getElementById('ellipse-b');
-    const parentDiv = spanA.parentElement;
+// ----------------blog
 
-    // Listen for the change event on the checkbox
-    checkbox.addEventListener('change', () => {
-        // If the checkbox is checked, add input fields for a and b
-        if (checkbox.checked) {
-            // Create input fields for a and b
-            const inputA = document.createElement('input');
-            inputA.type = 'number';
-            inputA.value = a;
-            inputA.classList.add('w-16', 'mr-2');
-            inputA.addEventListener('input', () => {
-                spanA.textContent = inputA.value;
-            });
+const navbarEnd = document.querySelector('.navbar-end');
+const blogLink = document.createElement('a');
+blogLink.classList.add('btn', 'bg-sky-400', 'text-white', 'border-transparent');
+blogLink.href = 'blog.html';
+blogLink.target = '_blank'; // This line opens the link in a new window
+blogLink.textContent = 'Blog';
+navbarEnd.appendChild(blogLink);
 
-            const inputB = document.createElement('input');
-            inputB.type = 'number';
-            inputB.value = b;
-            inputB.classList.add('w-16');
-            inputB.addEventListener('input', () => {
-                spanB.textContent = inputB.value;
-            });
-
-            // Replace the spans with the input fields
-            parentDiv.replaceChild(inputA, spanA);
-            parentDiv.replaceChild(inputB, spanB);
-        } else {
-            // Otherwise, remove the input fields and restore the spans
-            const newSpanA = document.createElement('span');
-            newSpanA.id = 'ellipse-a';
-            newSpanA.textContent = a;
-            const newSpanB = document.createElement('span');
-            newSpanB.id = 'ellipse-b';
-            newSpanB.textContent = b;
-            parentDiv.replaceChild(newSpanA, spanA);
-            parentDiv.replaceChild(newSpanB, spanB);
-        }
-    });
-}
-
-function changeCardColorOnHover(card) {
-    card.addEventListener('mouseover', function () {
-        card.style.backgroundColor = 'blue';
-    });
-
-    card.addEventListener('mouseout', function () {
-        card.style.backgroundColor = '';
-    });
-}

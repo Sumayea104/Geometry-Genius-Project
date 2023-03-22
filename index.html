@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/044eac0954.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
@@ -21,8 +22,8 @@
                         Geometry Genius</a>
                 </div>
 
-                <div class="navbar-end">
-                    <a class="btn bg-sky-400 text-white border-transparent ">Blog</a>
+                <div class="navbar-end" id="blog-container">
+                    
                 </div>
             </div>
         </section>
@@ -30,7 +31,7 @@
     <main>
         <section class="mx-12 my-6 lg:flex gap-4">
             <!-- card container -->
-            <div class="items w-3/4 grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <div class="items w-w-3/5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                 <!-- cards -->
                 <!-- card 01 triangle-->
                 <div class="card w-full shadow-xl" id="first-card">
@@ -146,12 +147,20 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title-06" id="sixth-title">Ellipse</h2>
-                        <p>Area(A) = &#8508 X a X b</p>
+                        
+                        <div class="flex">
+                            <p>Area(A) = &#8508 X a X b ;</p>
+                            <br>
+                            <i class="fa-sharp fa-solid fa-pen-to-square" id="edit-icon"></i>
+                        </div>
                         <div class="flex my-6">
                             <div class="flex">
                                 <p>a = <span id="ellipse-a">6</span> cm ; </p>
                                 <p>b = <span id="ellipse-b">10</span> cm ;</p>
-                                <input type="checkbox" checked="checked" class="checkbox" id="checkbox" />
+                                <!-- <input type="checkbox" checked="checked" class="checkbox" id="checkbox"/> -->
+                                <div class="checkbox" id="checkbox">
+                                    <i class="fa-sharp fa-solid fa-square-check"></i>
+                                </div>
                             </div>
                         </div>
 
@@ -162,7 +171,7 @@
                 </div>
             </div>
             <!-- area calculation -->
-            <div class="card lg:w-1/4 text-black mb-6">
+            <div class="card lg:w-2/5 text-black mb-6">
                 <div class="card-body items-center text-center ">
                     <h2 class="card-title underline underline-offset-8">Area Calculation</h2>
 
@@ -194,10 +203,8 @@
             <p>Copyright © 2023 - All right reserved by <span>Geometry Genius</span></p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/test.js"></script>
-    <script src="js/final.js"></script>
-    <script src="js/function.js"></script>
+    
+	<script src="js/script.js"></script>
 </body>
 
 </html>

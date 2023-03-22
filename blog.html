@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
+
 <body>
     <header>
         <section class="mx-12 my-6">
@@ -19,37 +22,52 @@
                 </div>
 
                 <div class="navbar-end">
-                    <a class="btn bg-sky-400 text-white border-transparent ">Blog</a>
+                    <a href="index.html" class="btn bg-sky-400 text-white border-transparent">Home</a>
                 </div>
             </div>
         </section>
     </header>
-    <main class="container mx-auto">
-        <h1 class="font-bold">Blog Questions</h1>
+    <main class="container mx-12">
+        <h1 class="font-bold my-12">Blog Questions</h1>
         <ul>
-            <li>
+            <li class="my-4">
                 <h3 class="font-bold">What is DOM and what is the purpose of DOM?</h3>
-                <p></p>
+                <p>The Document Object Model (DOM) is a way for programs to access and change the content of web pages
+                    using a scripting language like JavaScript. It provides a structured representation of web page
+                    content, which developers can modify to create interactive and dynamic user interfaces. By using the
+                    DOM, developers can change the content, style, and behavior of web pages in response to user
+                    interactions, creating engaging and interactive web applications.</p>
             </li>
-            <li>
+            <li class="my-4">
                 <h3 class="font-bold">How will you select HTML elements using DOM? Name the DOM methods?</h3>
-                <p></p>
+                <p>There are 5 ways in which to select elements in a DOM using selectors.
+                <ol>
+                    <li>getElementsByTagName()</li>
+                    <li>getElementsByClassName()</li>
+                    <li>getElementById()</li>
+                    <li>querySelector()</li>
+                    <li>querySelectorAll()</li>
+                </ol>
+                </p>
             </li>
-            <li>
+            <li class="my-4">
                 <h3 class="font-bold">What is event bubble?</h3>
-                <p></p>
+                <p>Event bubbling is a mechanism where an event triggered on a child element is also triggered on all
+                    its parent elements in the DOM tree until it reaches the top-most element. This allows for handling
+                    events on parent elements instead of each child element individually.</p>
             </li>
-            <li>
+            <li class="my-4">
                 <h3 class="font-bold">What is a callback function and why will you use it?</h3>
-                <p></p>
+                <p>A callback function is a function that is passed as an argument to another function and is executed
+                    inside that function. It's used to customize or specify what action should be taken once a certain
+                    event occurs or a specific task is completed.</p>
             </li>
         </ul>
     </main>
-    <footer class="footer footer-center p-4 bg-slate-300 text-base-content">
-        <div>
-            <p>Copyright © 2023 - All right reserved by <span>Geometry Genius</span></p>
-        </div>
-    </footer>
+    <script>
+
+    </script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

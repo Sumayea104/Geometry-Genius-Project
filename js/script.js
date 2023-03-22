@@ -1,55 +1,121 @@
-// function calculateArea(cardSelector, formula) {
-//     const card = document.querySelector(cardSelector);
-//     const calculateBtn = card.querySelector('.btn-primary');
-//     const inputs = card.querySelectorAll('input');
+// // first card
+// document.getElementById('first-card').addEventListener('click', function () {
+//     const cardElement = document.getElementById('First-name').innerText;
+//     const base = document.getElementById('triangle-base').value;
+//     const height = document.getElementById('triangle-height').value;
 
-//     function handleCalculateClick() {
-//         const values = Array.from(inputs).map((input) => parseFloat(input.value) || 0);
-//         const result = formula(...values);
-//         alert(`Area: ${result} square cm.`);
+//     if (base == '' || height == '') {
+//         return alert('please enter valid number');
 //     }
 
-//     calculateBtn.addEventListener('click', handleCalculateClick);
+//     const area = 0.5 * base * height;
+//     const areaInCmSquared = area.toFixed(2) + "cm²";
+
+//     displayData(cardElement, areaInCmSquared);
+// });
+// // second card
+// document.getElementById('second-card').addEventListener('click', function () {
+//     const cardElement = document.getElementById('second-title').innerText;
+//     const Width = document.getElementById('rectangle-width').value;
+//     const length = document.getElementById('rectangle-length').value;
+
+//     if (Width == '' || length == '') {
+//         return alert('please enter valid number');
+//     }
+
+//     const area = Width * length;
+//     const areaInCmSquared = area.toFixed(2) + "cm²";
+
+//     displayData(cardElement, areaInCmSquared);
+// });
+// // third card
+// document.getElementById('third-card').addEventListener('click', function () {
+//     const cardElement = document.getElementById('third-title').innerText;
+//     const base = document.getElementById('parallelogram-b').innerText;
+//     const height = document.getElementById('parallelogram-h').innerText;
+//     const area = parseInt(base) * parseInt(height);
+//     const areaInCmSquared = area.toFixed(2) + "cm²";
+
+//     displayData(cardElement, areaInCmSquared);
+// });
+// // 4th card
+// document.getElementById('fourth-card').addEventListener('click', function () {
+//     const cardElement = document.getElementById('fourth-title').innerText;
+//     const base = document.getElementById('rhombus-d1').innerText;
+//     const height = document.getElementById('rhombus-d2').innerText;
+//     const area = parseInt(base) * parseInt(height);
+//     const areaInCmSquared = area.toFixed(2) + "cm²";
+
+//     displayData(cardElement, areaInCmSquared);
+// });
+// // fifth
+// document.getElementById('fifth-card').addEventListener('click', function () {
+//     const cardElement = document.getElementById('fifth-title').innerText;
+//     const p = document.getElementById('pentagon-p').innerText;
+//     const b = document.getElementById('pentagon-b').innerText;
+//     const area = 0.5 * parseInt(p) * parseInt(b);
+//     const areaInCmSquared = area.toFixed(2) + "cm²";
+
+//     displayData(cardElement, areaInCmSquared);
+// });
+// // 6th
+// document.getElementById('sixth-card').addEventListener('click', function () {
+//     const cardElement = document.getElementById('sixth-title').innerText;
+//     const a = document.getElementById('ellipse-a').innerText;
+//     const b = document.getElementById('ellipse-b').innerText;
+
+//     const area = 3.14 * parseInt(a) * parseInt(b);
+
+//     const areaInCmSquared = area.toFixed(2) + "cm²";
+
+//     displayData(cardElement, areaInCmSquared);
+//     addInputFields(a, b);
+// });
+
+
+
+
+
+// // same work
+// function displayData(cardElement, area) {
+//     const container = document.getElementById('table-container');
+//     let count = container.getElementsByTagName('tr').length;
+//     count += 1;
+//     const tr = document.createElement('tr');
+//     tr.innerHTML = `
+//     <td>${count}</td>
+//     <td>${cardElement}</td>
+//     <td>${area}</td>
+//     `;
+//     container.appendChild(tr);
+
+
 // }
-// // Card 01 - Triangle
-// calculateArea('.card.bg-indigo-200', (base, height) => 0.5 * base * height);
-
-// // Card 02 - Rectangle
-// calculateArea('.card.bg-violet-400', (width, length) => width * length);
 
 
-// // reusable function for calculating parallelogram area
-// function calculateParallelogramArea() {
-//     const b = document.getElementById("parallelogram-b").innerText;
-//     const h = document.getElementById("parallelogram-h").innerText;
-//     const area = b * h;
-//     alert(`The area of the parallelogram is ${area} square cm.`);
-// }
-// // reusable function for calculating rhombus area
-// function calculateRhombusArea() {
-//     const d1 = document.getElementById("rhombus-d1").innerText;
-//     const d2 = document.getElementById("rhombus-d2").innerText;
-//     const area = 0.5 * d1 * d2;
-//     alert(`The area of the rhombus is ${area} square cm.`);
-// }
-// // add event listeners to the "Calculate" buttons
-// document.querySelector(".calculate-parallelogram-area").addEventListener("click", calculateParallelogramArea);
-// document.querySelector(".calculate-rhombus-area").addEventListener("click", calculateRhombusArea);
+// // Define the addInputFields function
+// function addInputFields() {
+//     // Get the checkbox and the span elements
+//     const checkbox = document.querySelector('.checkbox');
+//     const spanA = document.querySelector('#ellipse-a');
+//     const spanB = document.querySelector('#ellipse-b');
 
-
-// // reusable function for calculating pentagon area
-// function calculatePentagonArea() {
-//     const p = document.getElementById("pentagon-p").innerText;
-//     const b = document.getElementById("pentagon-b").innerText;
-//     const area = 0.5 * p * b;
-//     alert(`The area of the pentagon is ${area} square cm.`);
-// }
-
-// // reusable function for calculating ellipse area
-// function calculateEllipseArea() {
-//     const a = document.getElementById("ellipse-a").innerText;
-//     const b = document.getElementById("ellipse-b").innerText;
-//     const area = Math.PI * a * b;
-//     const roundedArea = area.toFixed(2);
-//     document.getElementById("ellipse-area").innerHTML = `<p>The area of the ellipse is ${roundedArea} square cm.</p>`;
+//     // Listen for the change event on the checkbox
+//     checkbox.addEventListener('change', () => {
+//         // If the checkbox is checked, add an input field for a
+//         if (checkbox.checked) {
+//             const inputA = document.createElement('input');
+//             inputA.type = 'number';
+//             inputA.value = spanA.textContent;
+//             inputA.addEventListener('input', () => {
+//                 spanA.textContent = inputA.value;
+//             });
+//             spanA.replaceWith(inputA);
+//         } else {
+//             // Otherwise, remove the input field and restore the span
+//             const span = document.createElement('span');
+//             span.textContent = spanA.value;
+//             inputA.replaceWith(span);
+//         }
+//     });
 // }

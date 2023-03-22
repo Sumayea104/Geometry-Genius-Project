@@ -6,7 +6,7 @@ firstCard.addEventListener('mouseover', function () {
 });
 
 firstCard.addEventListener('mouseout', function () {
-    firstCard.style.backgroundColor = "indigo";
+    firstCard.style.backgroundColor = "";
 });
 
 document.getElementById('calculate-triangle').addEventListener('click', function () {
@@ -23,7 +23,8 @@ document.getElementById('calculate-triangle').addEventListener('click', function
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
-    changeCardColorOnHover(card);
+
+    changeCardColorOnHover(firstCard);
     
 });
 
@@ -36,7 +37,7 @@ secondCard.addEventListener('mouseover', function () {
 });
 
 secondCard.addEventListener('mouseout', function () {
-    secondCard.style.backgroundColor = "indigo";
+    secondCard.style.backgroundColor = "";
 });
 
 
@@ -45,7 +46,7 @@ document.getElementById('calculate-rectangle').addEventListener('click', functio
     const Width = document.getElementById('rectangle-width').value;
     const length = document.getElementById('rectangle-length').value;
 
-    if (base <= 0 || height <= 0 || isNaN(base) || isNaN(height) || base == '' || height == '') {
+    if (Width <= 0 || length <= 0 || isNaN(Width) || isNaN(length) || Width == '' || length == '') {
         return alert('Please enter valid positive numbers');
     }
 
@@ -55,10 +56,23 @@ document.getElementById('calculate-rectangle').addEventListener('click', functio
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
-    changeCardColorOnHover(card);
+    changeCardColorOnHover(secondCard);
 });
 // third card
-document.getElementById('third-card').addEventListener('click', function () {
+const thirdCard = document.getElementById('third-card');
+
+thirdCard.addEventListener('mouseover', function () {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    thirdCard.style.backgroundColor = "#" + randomColor;
+});
+
+thirdCard.addEventListener('mouseout', function () {
+    thirdCard.style.backgroundColor = "";
+});
+
+
+
+document.getElementById('calculate-parallelogram').addEventListener('click', function () {
     const cardElement = document.getElementById('third-title').innerText;
     const base = document.getElementById('parallelogram-b').innerText;
     const height = document.getElementById('parallelogram-h').innerText;
@@ -67,10 +81,24 @@ document.getElementById('third-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
-    changeCardColorOnHover(card);
+    changeCardColorOnHover(thirdCard);
 });
 // 4th card
-document.getElementById('fourth-card').addEventListener('click', function () {
+const fourthCard = document.getElementById('fourth-card');
+
+fourthCard.addEventListener('mouseover', function () {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    fourthCard.style.backgroundColor = "#" + randomColor;
+});
+
+fourthCard.addEventListener('mouseout', function () {
+    fourthCard.style.backgroundColor = "";
+});
+
+
+
+
+document.getElementById('calculate-Rhombus').addEventListener('click', function () {
     const cardElement = document.getElementById('fourth-title').innerText;
     const base = document.getElementById('rhombus-d1').innerText;
     const height = document.getElementById('rhombus-d2').innerText;
@@ -79,10 +107,21 @@ document.getElementById('fourth-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
-    changeCardColorOnHover(card);
+    changeCardColorOnHover(fourthCard);
 });
 // fifth
-document.getElementById('fifth-card').addEventListener('click', function () {
+const fifthCard = document.getElementById('fifth-card');
+
+fifthCard.addEventListener('mouseover', function () {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    fifthCard.style.backgroundColor = "#" + randomColor;
+});
+
+fifthCard.addEventListener('mouseout', function () {
+    fifthCard.style.backgroundColor = "";
+});
+
+document.getElementById('calculate-pentagon').addEventListener('click', function () {
     const cardElement = document.getElementById('fifth-title').innerText;
     const p = document.getElementById('pentagon-p').innerText;
     const b = document.getElementById('pentagon-b').innerText;
@@ -91,10 +130,23 @@ document.getElementById('fifth-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
-    changeCardColorOnHover(card);
+    changeCardColorOnHover(fifthCard);
 });
 // 6th
-document.getElementById('sixth-card').addEventListener('click', function () {
+const sixthCard = document.getElementById('sixth-card');
+
+sixthCard.addEventListener('mouseover', function () {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    sixthCard.style.backgroundColor = "#" + randomColor;
+});
+
+sixthCard.addEventListener('mouseout', function () {
+    sixthCard.style.backgroundColor = "";
+});
+
+
+
+document.getElementById('calculate-ellipse').addEventListener('click', function () {
     const cardElement = document.getElementById('sixth-title').innerText;
     const a = document.getElementById('ellipse-a').innerText;
     const b = document.getElementById('ellipse-b').innerText;
@@ -104,7 +156,7 @@ document.getElementById('sixth-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
-    changeCardColorOnHover(card);
+    changeCardColorOnHover(sixthCard);
 });
 
 function displayData(cardElement, areaInCmSquared, areaInSqM) {

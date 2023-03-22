@@ -1,11 +1,21 @@
-// first card
-document.getElementById('first-card').addEventListener('click', function () {
+const firstCard = document.getElementById('first-card');
+
+firstCard.addEventListener('mouseover', function () {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    firstCard.style.backgroundColor = "#" + randomColor;
+});
+
+firstCard.addEventListener('mouseout', function () {
+    firstCard.style.backgroundColor = "indigo";
+});
+
+document.getElementById('calculate-triangle').addEventListener('click', function () {
     const cardElement = document.getElementById('First-name').innerText;
     const base = document.getElementById('triangle-base').value;
     const height = document.getElementById('triangle-height').value;
 
-    if (base == '' || height == '') {
-        return alert('please enter valid number');
+    if (base <= 0 || height <= 0 || isNaN(base) || isNaN(height) || base == '' || height == '') {
+        return alert('Please enter valid positive numbers.');
     }
 
     const area = 0.5 * base * height;
@@ -13,16 +23,19 @@ document.getElementById('first-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
+    changeCardColorOnHover(card);
 });
+
 // second card
 document.getElementById('second-card').addEventListener('click', function () {
     const cardElement = document.getElementById('second-title').innerText;
     const Width = document.getElementById('rectangle-width').value;
     const length = document.getElementById('rectangle-length').value;
 
-    if (Width == '' || length == '') {
-        return alert('please enter valid number');
+    if (base <= 0 || height <= 0 || isNaN(base) || isNaN(height) || base == '' || height == '') {
+        return alert('Please enter valid positive numbers');
     }
+
 
     const area = Width * length;
     const areaInCmSquared = area.toFixed(2) + "cm²";
@@ -93,7 +106,7 @@ function displayData(cardElement, areaInCmSquared, areaInSqM) {
 
     const convertBtn = tr.querySelector('.convert-btn');
     const areaTd = tr.querySelector('.area');
-    convertBtn.addEventListener('click', function() {
+    convertBtn.addEventListener('click', function () {
         if (isDisplayingSqM) {
             areaTd.innerHTML = this.getAttribute('data-cm');
             this.innerHTML = `Convert to m²`;
@@ -161,3 +174,12 @@ function addInputFields(a, b) {
     });
 }
 
+function changeCardColorOnHover(card) {
+    card.addEventListener('mouseover', function () {
+        card.style.backgroundColor = 'blue';
+    });
+
+    card.addEventListener('mouseout', function () {
+        card.style.backgroundColor = '';
+    });
+}

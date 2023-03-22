@@ -4,22 +4,29 @@ document.getElementById('first-card').addEventListener('click', function () {
     const base = document.getElementById('triangle-base').value;
     const height = document.getElementById('triangle-height').value;
 
-    if( base == ''|| height == ''){
-        return alert('please enter valid number' );
+    if (base == '' || height == '') {
+        return alert('please enter valid number');
     }
+
     const area = 0.5 * base * height;
+    const areaInCmSquared = area.toFixed(2) + "cm²";
 
-
-    displayData(cardElement, area);
+    displayData(cardElement, areaInCmSquared);
 });
 // second card
 document.getElementById('second-card').addEventListener('click', function () {
     const cardElement = document.getElementById('second-title').innerText;
     const Width = document.getElementById('rectangle-width').value;
     const length = document.getElementById('rectangle-length').value;
-    const area = Width * length;
 
-    displayData(cardElement, area);
+    if (Width == '' || length == '') {
+        return alert('please enter valid number');
+    }
+
+    const area = Width * length;
+    const areaInCmSquared = area.toFixed(2) + "cm²";
+
+    displayData(cardElement, areaInCmSquared);
 });
 // third card
 document.getElementById('third-card').addEventListener('click', function () {
@@ -27,8 +34,9 @@ document.getElementById('third-card').addEventListener('click', function () {
     const base = document.getElementById('parallelogram-b').innerText;
     const height = document.getElementById('parallelogram-h').innerText;
     const area = parseInt(base) * parseInt(height);
+    const areaInCmSquared = area.toFixed(2) + "cm²";
 
-    displayData(cardElement, area);
+    displayData(cardElement, areaInCmSquared);
 });
 // 4th card
 document.getElementById('fourth-card').addEventListener('click', function () {
@@ -36,8 +44,9 @@ document.getElementById('fourth-card').addEventListener('click', function () {
     const base = document.getElementById('rhombus-d1').innerText;
     const height = document.getElementById('rhombus-d2').innerText;
     const area = parseInt(base) * parseInt(height);
+    const areaInCmSquared = area.toFixed(2) + "cm²";
 
-    displayData(cardElement, area);
+    displayData(cardElement, areaInCmSquared);
 });
 // fifth
 document.getElementById('fifth-card').addEventListener('click', function () {
@@ -45,8 +54,9 @@ document.getElementById('fifth-card').addEventListener('click', function () {
     const p = document.getElementById('pentagon-p').innerText;
     const b = document.getElementById('pentagon-b').innerText;
     const area = 0.5 * parseInt(p) * parseInt(b);
+    const areaInCmSquared = area.toFixed(2) + "cm²";
 
-    displayData(cardElement, area);
+    displayData(cardElement, areaInCmSquared);
 });
 // 6th
 document.getElementById('sixth-card').addEventListener('click', function () {
@@ -56,7 +66,9 @@ document.getElementById('sixth-card').addEventListener('click', function () {
 
     const area = 3.14 * parseInt(a) * parseInt(b);
 
-    displayData(cardElement, area);
+    const areaInCmSquared = area.toFixed(2) + "cm²";
+
+    displayData(cardElement, areaInCmSquared);
     addInputFields(a, b);
 });
 

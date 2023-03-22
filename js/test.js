@@ -24,10 +24,23 @@ document.getElementById('calculate-triangle').addEventListener('click', function
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
     changeCardColorOnHover(card);
+    
 });
 
 // second card
-document.getElementById('second-card').addEventListener('click', function () {
+const secondCard = document.getElementById('second-card');
+
+secondCard.addEventListener('mouseover', function () {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    secondCard.style.backgroundColor = "#" + randomColor;
+});
+
+secondCard.addEventListener('mouseout', function () {
+    secondCard.style.backgroundColor = "indigo";
+});
+
+
+document.getElementById('calculate-rectangle').addEventListener('click', function () {
     const cardElement = document.getElementById('second-title').innerText;
     const Width = document.getElementById('rectangle-width').value;
     const length = document.getElementById('rectangle-length').value;
@@ -42,6 +55,7 @@ document.getElementById('second-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
+    changeCardColorOnHover(card);
 });
 // third card
 document.getElementById('third-card').addEventListener('click', function () {
@@ -52,7 +66,8 @@ document.getElementById('third-card').addEventListener('click', function () {
     const areaInCmSquared = area.toFixed(2) + "cm²";
     const areaInSqM = convertToSqM(areaInCmSquared);
 
-    displayData(cardElement, areaInCmSquared, areaInSqM);;
+    displayData(cardElement, areaInCmSquared, areaInSqM);
+    changeCardColorOnHover(card);
 });
 // 4th card
 document.getElementById('fourth-card').addEventListener('click', function () {
@@ -64,6 +79,7 @@ document.getElementById('fourth-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
+    changeCardColorOnHover(card);
 });
 // fifth
 document.getElementById('fifth-card').addEventListener('click', function () {
@@ -75,6 +91,7 @@ document.getElementById('fifth-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
+    changeCardColorOnHover(card);
 });
 // 6th
 document.getElementById('sixth-card').addEventListener('click', function () {
@@ -87,6 +104,7 @@ document.getElementById('sixth-card').addEventListener('click', function () {
     const areaInSqM = convertToSqM(areaInCmSquared);
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
+    changeCardColorOnHover(card);
 });
 
 function displayData(cardElement, areaInCmSquared, areaInSqM) {

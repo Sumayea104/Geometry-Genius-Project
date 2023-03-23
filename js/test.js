@@ -156,6 +156,8 @@ document.getElementById('calculate-ellipse').addEventListener('click', function 
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
     changeCardColorOnHover(sixthCard);
+    showInputs()
+    setValues()
 });
 
 function displayData(cardElement, areaInCmSquared, areaInSqM) {
@@ -207,6 +209,20 @@ function convertToSqM(areaInCmSquared) {
     return areaInSqM + " m²";
 }
 
+function showInputs() {
+    document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input" id="input-a" placeholder="Enter value">';
+    document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input" id="input-b" placeholder="Enter value">';
+}
+
+function setValues() {
+    const inputA = document.getElementById('input-a').value;
+    const inputB = document.getElementById('input-b').value;
+
+    if (inputA && inputB) {
+        document.getElementById('ellipse-a').innerHTML = inputA;
+        document.getElementById('ellipse-b').innerHTML = inputB;
+    }
+}
 
 
 

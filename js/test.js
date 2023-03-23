@@ -224,7 +224,15 @@ function setValues() {
     }
 }
 
+function changeCardColorOnHover(card) {
+    card.addEventListener('mouseover', function () {
+        card.style.backgroundColor = 'blue';
+    });
 
+    card.addEventListener('mouseout', function () {
+        card.style.backgroundColor = '';
+    });
+}
 
 // ----------------blog
 

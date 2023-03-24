@@ -156,8 +156,6 @@ document.getElementById('calculate-ellipse').addEventListener('click', function 
 
     displayData(cardElement, areaInCmSquared, areaInSqM);
     changeCardColorOnHover(sixthCard);
-    showInputs()
-    setValues()
 });
 
 function displayData(cardElement, areaInCmSquared, areaInSqM) {
@@ -209,9 +207,13 @@ function convertToSqM(areaInCmSquared) {
     return areaInSqM + " m²";
 }
 
+// 
+// 
+// 
+
 function showInputs() {
-    document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input" id="input-a" placeholder="Enter value">';
-    document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input" id="input-b" placeholder="Enter value">';
+    document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-a" placeholder="">';
+    document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-b" placeholder="">';
 }
 
 function setValues() {
@@ -224,15 +226,7 @@ function setValues() {
     }
 }
 
-function changeCardColorOnHover(card) {
-    card.addEventListener('mouseover', function () {
-        card.style.backgroundColor = 'blue';
-    });
 
-    card.addEventListener('mouseout', function () {
-        card.style.backgroundColor = '';
-    });
-}
 
 // ----------------blog
 

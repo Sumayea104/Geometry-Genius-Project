@@ -212,8 +212,8 @@
 // // 
 
 // function showInputs() {
-//     document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input" id="input-a" placeholder="Enter value">';
-//     document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input" id="input-b" placeholder="Enter value">';
+//     document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-a" placeholder="">';
+//     document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-b" placeholder="">';
 // }
 
 // function setValues() {

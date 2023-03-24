@@ -39,7 +39,6 @@ secondCard.addEventListener('mouseout', function () {
     secondCard.style.backgroundColor = "";
 });
 
-
 document.getElementById('calculate-rectangle').addEventListener('click', function () {
     const cardElement = document.getElementById('second-title').innerText;
     const Width = document.getElementById('rectangle-width').value;
@@ -48,8 +47,6 @@ document.getElementById('calculate-rectangle').addEventListener('click', functio
     if (Width <= 0 || length <= 0 || isNaN(Width) || isNaN(length) || Width == '' || length == '') {
         return alert('Please enter valid positive numbers');
     }
-
-
     const area = Width * length;
     const areaInCmSquared = area.toFixed(2) + "cm²";
     const areaInSqM = convertToSqM(areaInCmSquared);
@@ -68,8 +65,6 @@ thirdCard.addEventListener('mouseover', function () {
 thirdCard.addEventListener('mouseout', function () {
     thirdCard.style.backgroundColor = "";
 });
-
-
 
 document.getElementById('calculate-parallelogram').addEventListener('click', function () {
     const cardElement = document.getElementById('third-title').innerText;
@@ -93,9 +88,6 @@ fourthCard.addEventListener('mouseover', function () {
 fourthCard.addEventListener('mouseout', function () {
     fourthCard.style.backgroundColor = "";
 });
-
-
-
 
 document.getElementById('calculate-Rhombus').addEventListener('click', function () {
     const cardElement = document.getElementById('fourth-title').innerText;
@@ -142,9 +134,6 @@ sixthCard.addEventListener('mouseover', function () {
 sixthCard.addEventListener('mouseout', function () {
     sixthCard.style.backgroundColor = "";
 });
-
-
-
 document.getElementById('calculate-ellipse').addEventListener('click', function () {
     const cardElement = document.getElementById('sixth-title').innerText;
     const a = document.getElementById('ellipse-a').innerText;
@@ -212,21 +201,19 @@ function convertToSqM(areaInCmSquared) {
 // 
 
 function showInputs() {
-    document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-a" placeholder="">';
-    document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-b" placeholder="">';
+    document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-300 input-a" placeholder="">';
+    document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-300 input-b" placeholder="">';
 }
 
 function setValues() {
-    const inputA = document.getElementById('input-a').value;
-    const inputB = document.getElementById('input-b').value;
+    const inputA = parseInt(document.querySelector('.input-a').value);
+    const inputB = parseInt(document.querySelector('.input-b').value);
 
     if (inputA && inputB) {
-        document.getElementById('ellipse-a').innerHTML = inputA;
-        document.getElementById('ellipse-b').innerHTML = inputB;
+        document.getElementById('ellipse-a').innerHTML = inputA ;
+        document.getElementById('ellipse-b').innerHTML = inputB ;
     }
 }
-
-
 
 // ----------------blog
 
@@ -234,7 +221,7 @@ const navbarEnd = document.querySelector('.navbar-end');
 const blogLink = document.createElement('a');
 blogLink.classList.add('btn', 'bg-sky-400', 'text-white', 'border-transparent');
 blogLink.href = 'blog.html';
-blogLink.target = '_blank'; // This line opens the link in a new window
+blogLink.target = '_blank'; 
 blogLink.textContent = 'Blog';
 navbarEnd.appendChild(blogLink);
 

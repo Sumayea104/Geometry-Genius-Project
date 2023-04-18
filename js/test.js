@@ -93,7 +93,7 @@ document.getElementById('calculate-Rhombus').addEventListener('click', function 
     const cardElement = document.getElementById('fourth-title').innerText;
     const base = document.getElementById('rhombus-d1').innerText;
     const height = document.getElementById('rhombus-d2').innerText;
-    const area = parseInt(base) * parseInt(height);
+    const area =0.5 * parseInt(base) * parseInt(height);
     const areaInCmSquared = area.toFixed(2) + "cm²";
     const areaInSqM = convertToSqM(areaInCmSquared);
 
@@ -201,20 +201,34 @@ function convertToSqM(areaInCmSquared) {
 // 
 
 function showInputs() {
-    document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-300 input-a" placeholder="">';
-    document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-300 input-b" placeholder="">';
+    document.getElementById('ellipse-a').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-a" placeholder="">';
+    document.getElementById('ellipse-b').innerHTML = '<input type="number" class="form-input w-1/2 rounded-sm bg-gray-200" id="input-b" placeholder="">';
 }
 
 function setValues() {
-    const inputA = parseInt(document.querySelector('.input-a').value);
-    const inputB = parseInt(document.querySelector('.input-b').value);
+    const inputA = document.getElementById('input-a').value;
+    const inputB = document.getElementById('input-b').value;
 
     if (inputA && inputB) {
-        document.getElementById('ellipse-a').innerHTML = inputA ;
-        document.getElementById('ellipse-b').innerHTML = inputB ;
+        document.getElementById('ellipse-a').innerHTML = inputA;
+        document.getElementById('ellipse-b').innerHTML = inputB;
     }
 }
 
+document.getElementById('checkbox').addEventListener('click', setValues);
+
+
+
+
+// mouseover
+function changeCardColorOnHover(card) {
+    card.addEventListener('mouseover', function () {
+        card.style.backgroundColor = 'blue';
+    });
+    card.addEventListener('mouseout', function () {
+        card.style.backgroundColor = '';
+    });
+}
 // ----------------blog
 
 const navbarEnd = document.querySelector('.navbar-end');
